@@ -15,7 +15,7 @@
   <div class="row">
     <% @cocktails.each do |cocktail| %>
         <div class="col-xs-12 col-sm-4">
-          <div class="cocktail-card" style = "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://unsplash.it/200/300/?random?test=#{cocktail.id}');">
+          <div class="cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://unsplash.it/200/300?random=<%= cocktail.id %>');">
             <h3><%= cocktail.name %></h3>
             <div>
               <p id='links'><%= link_to 'Show ', cocktail %>
