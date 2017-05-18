@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20170518093920) do
     t.integer  "cocktail_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.index ["cocktail_id"], name: "index_doses_on_cocktail_id", using: :btree
+    t.index ["ingredient_id"], name: "index_doses_on_ingredient_id", using: :btree
   end
 
   create_table "ingredients", force: :cascade do |t|
