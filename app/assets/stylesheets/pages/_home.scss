@@ -1,4 +1,58 @@
-/* -------------------------------------
- * CSS code specific to home page
- * (margin/padding adjustments)
- * ------------------------------------- */
+h1 {
+  font-size: lighter;
+  font-family: Helvetica;
+  color: #E83151;
+  font-size: 25px;
+  margin: 5px 25px;
+}
+
+.container.index-cocktails {
+  margin-top: 90px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #E83151;
+  padding: 25px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.cocktail_show {
+  margin-top: 90px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #E83151;
+  padding: 25px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.container.new-ingredient {
+  margin-top: 90px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #E83151;
+  padding: 25px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.container.new-cocktail {
+  margin-top: 90px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #E83151;
+  padding: 25px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.container.cocktail-edit {
+  margin-top: 90px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #E83151;
+  padding: 25px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+

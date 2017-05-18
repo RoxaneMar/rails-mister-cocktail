@@ -15,10 +15,10 @@
   <div class="row">
     <% @cocktails.each do |cocktail| %>
         <div class="col-xs-12 col-sm-4">
-          <div class="cocktail-card" style = "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://unsplash.it/200/300/?random?');">
+          <div class="cocktail-card" style = "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://unsplash.it/200/300/?random?test=#{cocktail.id}');">
             <h3><%= cocktail.name %></h3>
-            <div class='list-inline'>
-              <p><%= link_to 'Show ', cocktail %>
+            <div>
+              <p id='links'><%= link_to 'Show ', cocktail %>
               <%= link_to 'Edit ', edit_cocktail_path(cocktail) %>
               <%= link_to 'Destroy', cocktail, method: :delete, data: { confirm: 'Are you sure?' } %></p>
             </div>
@@ -31,7 +31,6 @@
 
 <br>
 
-<%= link_to 'New Cocktail', new_cocktail_path %>
 </div>
 
 <% content_for(:toto) do %>
