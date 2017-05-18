@@ -1,0 +1,36 @@
+<div class="navbar-wagon navbar-wagon-fixed">
+  <!-- Logo -->
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+
+    <!-- Search form -->
+   <!--  <form action="" class="navbar-wagon-search">
+      <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
+      <button type="submit" class="navbar-wagon-search-btn">
+        <i class="fa fa-search"></i>
+      </button>
+    </form> -->
+
+
+    <!-- Profile picture and dropdown -->
+ <!--    <div class="navbar-wagon-item">
+      <div class="dropdown">
+        <img src="http://placehold.it/50x50" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Log Out</a></li>
+        </ul>
+      </div>
+    </div> -->
+
+    <!-- Button (call-to-action) -->
+    <%= link_to 'Add a new cocktail!', new_cocktail_path, class: 'navbar-wagon-item btn-medium'  %>
+    <h1><%= yield(:toto).blank? ? "Cocktails" : yield(:toto) %></h1>
+
+  </div>
+
+  <!-- Dropdown appearing on mobile only -->
+</div>

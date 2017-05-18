@@ -4,7 +4,6 @@ class CreateDoses < ActiveRecord::Migration[5.0]
       t.text :description
       t.belongs_to :ingredient
       t.belongs_to :cocktail
-
       t.timestamps
     end
   end
