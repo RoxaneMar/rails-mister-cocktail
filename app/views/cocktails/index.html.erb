@@ -6,25 +6,33 @@
 <h1>Our best cocktails</h1>
 
 
-<div class="container index-cocktails">
+
+<div class="container">
  <!--  <div class="row">
     <div class="col-xs-12 text-center">
       <h1>Cocktails</h1>
     </div>
   </div> -->
-  <div class="row">
-    <% @cocktails.each do |cocktail| %>
-        <div class="col-xs-12 col-sm-4">
-          <div class="cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @cocktail.photo.path, height: 300, width: 400, crop: :fill %>');">
-            <h3><%= link_to cocktail.name, cocktail %></h3>
-            <div>
-              <p id='links'><%= link_to 'Edit ', edit_cocktail_path(cocktail) %><%= link_to 'Destroy', cocktail, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  <div class="index-cocktails">
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
+          <div class="col-xs-12 col-sm-4">
+            <% if cocktail.photo? %>
+              <div class="cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('<%= cl_image_path cocktail.photo.path, height: 300, width: 400, crop: :fill %>');">
+              <% else %>
+                <div class="cocktail-card">
+              <% end %>
+              <h3><%= link_to cocktail.name, cocktail %></h3>
+              <div class='index-icones'>
+                <%= link_to '', edit_cocktail_path(cocktail), class: 'fa fa-pencil' %>
+                <%= link_to '', cocktail, method: :delete, data: { confirm: 'Are you sure?' }, class: 'fa fa-trash' %>
+              </div>
             </div>
           </div>
-        </div>
-      <% end %>
-  </div>
+        <% end %>
+    </div>
 
+  </div>
 
 
 <br>
